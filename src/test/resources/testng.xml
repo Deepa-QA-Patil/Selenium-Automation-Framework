@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<suite name="Suite">
+
+    <listeners>
+        <listener class-name="com.PracticalAuto.listeners.TestListner"/>
+    </listeners>
+
+    <test name="AutomationTest">
+        <classes>
+            <!-- <class name="com.AutoPractice.test.DummyClass"/> -->
+            <class name="com.AutoPractice.test.LoginPageTest"/>
+        </classes>
+    </test>
+
+    <test name="AutomationTest2">
+    </test>
+
+</suite>
+	
