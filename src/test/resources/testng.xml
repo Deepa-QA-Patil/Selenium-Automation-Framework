@@ -11,7 +11,11 @@
     <test name="AutomationTest">
         <classes>
             <!-- <class name="com.AutoPractice.test.DummyClass"/> -->
-            <class name="com.AutoPractice.test.LoginPageTest"/>
+           <!--  <class name="com.AutoPractice.test.LoginPageTest"/>
+            <class name="com.AutoPractice.test.LogoutTest"/>
+            <class name="com.AutoPractice.test.SearchObjectTest"/>-->
+            <class name="com.AutoPractice.test.CartItemTest"/>
+            
         </classes>
     </test>
 

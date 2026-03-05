@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -94,10 +95,12 @@ public void waitForPageLoad(int timeoutInSeconds) {
 }
 public void scrollToElement(By by) {
     try {
+    	applyBorder(by,"orange");
         JavascriptExecutor js = (JavascriptExecutor) driver;
         WebElement element = driver.findElement(by);
 
-        js.executeScript("arguments[0].scrollIntoView(true);", element);
+        js.executeScript("arguments[0].scrollIntoView({block:'center'});", element);
+        System.out.println("scrolling");
     } catch (Exception e) {
         System.out.println("Unable to locate element: " + e.getMessage());
     }
@@ -112,6 +115,27 @@ public void click(By by) {
     } catch (Exception e) {
     	applyBorder(by,"green");
         System.out.println("Unable to click element: " + e.getMessage());
+    }
+}
+public void clicki(By by) {
+    try {
+    	
+    	waitForElementToBEClickable(by);
+        driver.findElement(by).click();
+    } catch (Exception e) {
+    	
+        System.out.println("Unable to click element: " + e.getMessage());
+    }
+}
+
+public void sendingkey(By by,String name) {
+    try {
+    	applyBorder(by,"orange");
+    	waitForElementToBEClickable(by);
+        driver.findElement(by).sendKeys(name);
+    } catch (Exception e) {
+    	applyBorder(by,"green");
+        System.out.println("Unable to send keys: " + e.getMessage());
     }
 }
 //Wait for the element to be clickable
@@ -151,6 +175,13 @@ public void applyBorder(By by,String color) {
   } catch (Exception e) {
       
   }
+
+}
+
+public void hover(By by ) {
+	WebElement ele = driver.findElement(by);
+	Actions act = new Actions(driver);
+	act.moveToElement(ele);
 }
 
 
