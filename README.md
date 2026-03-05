@@ -35,22 +35,32 @@ The goal of this project is to design a scalable and maintainable automation fra
 
 ## Framework Structure
 RealAutoPractice
+
 │
 
 ├── src/main/java
+
 │ ├── base
+
 │ ├── pages
+
 │ ├── utilities
 │
 
 ├── src/test/java
+
 │ ├── tests
+
 │
 ├── resources
+
 │ ├── config.properties
+
 │
 ├── testng.xml
+
 ├── pom.xml
+
 
 ---
 
