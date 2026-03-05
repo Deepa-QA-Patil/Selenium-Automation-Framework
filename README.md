@@ -89,4 +89,10 @@ After execution, Extent Reports will be generated showing:
 Deepa Patil  
 Software Test Engineer | Automation Testing | Selenium | Java | TestNG
 
+## Screenshots of Tests
+<img width="1920" height="847" alt="image" src="https://github.com/user-attachments/assets/ba2f70cf-91d3-4934-b54d-9777aef30972" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/adac8a21-aa4f-43b2-aefd-cd00e2eaf017" />
+
+
+
 
